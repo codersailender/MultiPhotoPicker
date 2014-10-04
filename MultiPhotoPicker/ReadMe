@@ -1,0 +1,14 @@
+/**
+
+This sample is made considering iPhone 6 and iPhone 6 Plus
+Try for other iPhone models at you own risk.
+Feel free to make any changes. You can reach me any time singh.sailender@yahoo.in
+
+Need:
+
+iOS UIImagePickerController till now does not allows us to select multiple images from library.
+This component will do this job for you.
+
+Note: It will list only user saved images. This component is specific to iPhone 6 and iPhone 6 Plus only.
+
+**/

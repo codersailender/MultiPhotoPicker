@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DBh-GO-ifo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Coder Sailender-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="CSViewController" customModule="MultiPhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfS-84-hVI">
+                                <rect key="frame" x="233" y="285" width="134" height="30"/>
+                                <state key="normal" title="Open Photo Library">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPhotoLibraryTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ba8-As-59O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZfS-84-hVI" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Au9-78-tix"/>
+                            <constraint firstItem="ZfS-84-hVI" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TNb-fG-eY1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Coder Sailender" id="kEZ-GX-wGa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="-160"/>
+        </scene>
+        <!--Image Gallery View Controller-->
+        <scene sceneID="YzA-Tu-mQv">
+            <objects>
+                <viewController storyboardIdentifier="ImageGalleryView" id="fVE-yS-OuS" customClass="CSImageGalleryViewController" customModule="MultiPhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BHb-in-npj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9E2-j6-07W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HDi-ME-L6X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZG-qC-3ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NRI-nH-BcO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DBh-GO-ifo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4sL-az-q2r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="W1m-2v-adN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEt-pp-58U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="-160"/>
+        </scene>
+    </scenes>
+</document>
