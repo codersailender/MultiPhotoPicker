@@ -3,6 +3,9 @@
 //  MultiPhotoPicker
 //
 //  Created by Sailender Singh on 20/09/14.
+//  You can  use, modify, this class or can use in any
+//  project but you have to use above mentioned named where
+//  ever you will use this class. It is must.
 //  Copyright (c) 2014 Sailender Singh. All rights reserved.
 //
 

@@ -3,6 +3,9 @@
 //  MultiPhotoPicker
 //
 //  Created by Sailender Singh on 20/09/14.
+//  You can  use, modify, this class or can use in any
+//  project but you have to use above mentioned named where
+//  ever you will use this class. It is must.
 //  Copyright (c) 2014 Sailender Singh. All rights reserved.
 //
 
@@ -19,6 +22,9 @@ class CSImageGalleryViewController:  UIViewController {
     private var allPhotoAssets: NSMutableArray?=nil
     private var callback: completionCallback?=nil
     
+// MARK: -
+// MARK: - ALAssetLibray singleton object
+    
     class var assetLibrary:ALAssetsLibrary {
         get {
             struct Static {
@@ -33,6 +39,9 @@ class CSImageGalleryViewController:  UIViewController {
             return Static.instance!
         }
     }
+
+// MARK: -
+// MARK: - View life cycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +62,9 @@ class CSImageGalleryViewController:  UIViewController {
         super.viewDidAppear(animated);
         self.fetchPhotoLibraryImages()
     }
+    
+// MARK: -
+// MARK: - Fetching photos from library
     
     private func fetchPhotoLibraryImages() {
         allPhotoAssets = NSMutableArray()
@@ -150,9 +162,8 @@ class CSImageGalleryViewController:  UIViewController {
         
     }
     
-    func selectedImages(completionHandler: (images: NSArray) -> Void) {
-        callback = completionHandler
-    }
+// MARK: -
+// MARK: - Action methods
     
     func thumbnailDidTapped(gesture: UITapGestureRecognizer) {
         var thumbnail: CSPhotoThumbnailView = gesture.view as CSPhotoThumbnailView
@@ -192,6 +203,13 @@ class CSImageGalleryViewController:  UIViewController {
         })
         callback!(images: images)
         self.dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+// MARK: -
+// MARK: - CompletionHandler
+    
+    func selectedImages(completionHandler: (images: NSArray) -> Void) {
+        callback = completionHandler
     }
     
 }
